@@ -7,7 +7,7 @@ const router = require('./routes');
 
 const app = express();
 
-// CORS setup
+// CORS setup 
 app.use(cors({
     origin: process.env.FRONTEND_URL,  // This should be set in .env (e.g., http://localhost:3001)
     credentials: true

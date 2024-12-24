@@ -26,6 +26,7 @@ const forgotPasswordController = require('../controller/user/forgotPassword');
 const paymentController = require('../controller/order/paymentController')
 const webhooks = require('../controller/order/webhook'); // Adjust the path based on your project structure
 const orderController = require('../controller/order/order.controller')
+const allOrdercontroller = require('../controller/order/allOrder.controller')
 
 
 router.post("/signup",userSignUpController)
@@ -58,6 +59,6 @@ router.post("/delete-cart-product",authToken,deleteAddToCartProduct)
 router.post("/checkout",authToken,paymentController)
 router.post("/webhook" ,webhooks) // /api/webhook
 router.get("/order-list",authToken,orderController)
-
+router.get("/all-order",authToken,allOrdercontroller)
 
 module.exports = router
